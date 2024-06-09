@@ -31,13 +31,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { useGlobalState } from '@/composables/useGlobalState';
 
 // TODO: Switch from local to global state
 
-const profileData = ref({
-  name: "Thomas Anderson",
-  jobTitle: "Software Engineer",
-  department: "Artificial Intelligence",
-});
+const { profileData } = useGlobalState();
 </script>
